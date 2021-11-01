@@ -12,10 +12,10 @@ const Footer = () => {
 
     const onSubmit = data => {
         console.log(data)
-          axios.post('http://localhost:5000/places', data )
+          axios.post('https://quiet-fjord-33750.herokuapp.com/places', data )
           .then(res => {
               console.log(res)
-              if(res.data.insetedId){
+              if(res.data.insertedId){
                   alert('New Places Added Successfully')
                   reset();
               }

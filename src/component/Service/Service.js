@@ -6,10 +6,9 @@ const Service = () => {
 
     //Load Data from JSON
     useEffect(() => {
-        fetch('.http://localhost:5000/places')
+        fetch('https://quiet-fjord-33750.herokuapp.com/places')
         .then(res => res.json())
-        .then(data => {
-                
+        .then(data => {    
             setServices(data);
         })
     }, [])

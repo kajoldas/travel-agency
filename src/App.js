@@ -3,13 +3,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import NotFound from './component/NotFound/NotFound';
+import Service from './component/Service/Service';
 import Header from './component/Home/Header/Header';
-import Detail from './component/Detail/Detail';
 import Footer from './component/Footer/Footer';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageAllOrder from './component/ManageAllOrder/ManageAllOrder';
 import AddService from './component/AddService/AddService';
+import Booking from './component/Booking/Booking';
 
 
 function App() {
@@ -38,9 +39,8 @@ function App() {
             <Route  path="/login">
               <Login></Login>
             </Route>
-            
-            <Route path="/appointbook/:id">
-              <Detail></Detail>
+            <Route path="/booking/:Serviceid">
+              <Booking></Booking>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

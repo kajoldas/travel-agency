@@ -4,7 +4,7 @@ import { Card, CardGroup } from 'react-bootstrap';
 const Blog = () => {
     return (
         <div className=" container">
-            <h2 className="text-center fw-bolder py-5">Main offer</h2>
+            <h2 className="text-center fw-bolder py-5">Our Tour Offers</h2>
             
 
 
