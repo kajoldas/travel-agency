@@ -6,7 +6,7 @@
 
 * It have routing system for Home, My Orders, Manage All Orders etc.
 
-* client side code:
+* client side code: https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-kajoldas
 
 * server side code : https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-kajoldas
 
