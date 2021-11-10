@@ -34,6 +34,7 @@ const Banner = () => {
     <img
       className=" my-img  d-block w-100"
       src="https://alltourinfo.com/wp-content/uploads/2021/02/Coxs-Bazar-Sea-Beach.jpg"
+      alt="Cox's bazar"
     />
     <Carousel.Caption>
       <h3 className="text-black ">Cox's Bazar</h3>

@@ -12,15 +12,20 @@ const Service = () => {
             setServices(data);
         })
     }, [])
+
+    
+        
     return (
         <div>
 
             <section id="" className="mt-5 container">
             <h2 className="text-center fw-bolder pb-5 mb-4">Our Services</h2>
-            {/* render vehicles from server side */}
+            {/* render places from server side */}
             <div className="row">
                 {
-                    services.map(service => <ServiceCard service={service}></ServiceCard>)
+                    services.map(service => <ServiceCard
+                        key={service._id}
+                        service={service}></ServiceCard>)
                 }
             </div>
         </section>

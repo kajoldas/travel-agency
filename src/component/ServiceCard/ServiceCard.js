@@ -3,24 +3,10 @@ import { Link } from 'react-router-dom';
 import './ServiceCard.css'
 
 const ServiceCard = (props) => {
-    const {_id, name, description, img, price, services} = props.service;
+    const {_id, name, description, img, price} = props.service;
+    
 
-    //--------Handle delete---------- 
-    const handleDeletePlace = _id => {
-        const url = `https://quiet-fjord-33750.herokuapp.com/places/${_id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                alert('deleted succesfully');
-                // const remainingUsers = services.filter(service => service._id !==id);    
-            }
-
-        })
-
-    }
+    
     return (
         <div className="container mb-5 col-lg-4 col-sm-6">
              <div className="card shadow-lg w-100 h-100 text-center rounded my-card">
@@ -38,7 +24,7 @@ const ServiceCard = (props) => {
                         <Link to={`/booking/${_id}`}>
                             <button className="btn btn-success">Book Your Tour, Today!</button>
                         </Link>
-                        <button onClick={ () =>  handleDeletePlace(services._id)} className="btn btn-danger" > Delete This place</button>
+                        
                     </div>
                 </div>
             </div> 
