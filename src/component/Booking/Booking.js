@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { Col, Container, Row } from 'react-bootstrap';
+import './Booking.css';
 
 const Booking = () => {
 
@@ -33,52 +35,32 @@ const Booking = () => {
             .then(data => setService(data))
     }, [])
     return (
-        <div>
-            <h1 className="service py-5 my-5 " >Book Your Tour Today</h1>
-            <h2>This is booking, </h2>
+        <Container className="places">
+            <h1 className="service py-5  my-5 " >Book Your Tour Today</h1>
+            <h2>Places Order </h2>
 
-          
-
-            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+               <Row>
+                  <Col>
+                  <form className="form" onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("yourname", { required: true, maxLength: 20 })} placeholder="Name" />
                     <input type="email" {...register("email")} placeholder="Email" defaultValue={service?.email} />
                     <input type="date" {...register("date")} placeholder="Approximation date of Travel" />
                     <input type="Address" {...register("address", { min: 18, max: 99 })} placeholder="Address" />
 
-                    <input
-                {...register("Place")}
-                defaultValue={service?.name}
-                placeholder="Destination"
-              />
-              
-              <input
-                {...register("Description")}
-                placeholder="Description"
-                defaultValue={service?.description}
-                className="p-2 m-2"
-                
-              />
-              
+              <input type="submit" placeholder="submit" />
+             </form>
+                  </Col>
+                  <Col>
+                 <img style={{width:'30%'}} src={service?.img} />
+                  <h1>{service?.name}</h1> 
+                 <p>{service?.description}</p>
+                 <h4> Price:{service?.price}</h4>
+                  </Col>
+               </Row>
+            
 
-              <input
-                {...register("price")}
-                placeholder="price"
-                defaultValue={service?.price}
-                className="p-2 m-2"
-               
-              />
-              
-              <input
-                {...register("image")}
-                defaultValue={service?.img}
-                placeholder="image URL"
-                className="p-2 m-2"
-                
-              />
-                <input type="submit" placeholder="submit" />
-                    
-            </form>
-        </div>
+
+        </Container>
     );
 };
 

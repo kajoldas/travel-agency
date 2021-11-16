@@ -29,13 +29,13 @@ function App() {
               <Route path="/booking/:ServiceId">
                 <Booking></Booking>
               </Route>
-              <Route path="/myorders">
+              <Route path="/manage-all-order">
                 <MyOrders></MyOrders>
               </Route>
               {/* <PrivateRouteRoute path="/myorders">
                 <MyOrde></MyOrders>
               </PrivateRoute> */}
-              <Route path="/manage-all-order">
+              <Route path="/myorders">
                 <ManageAllOrder></ManageAllOrder>
               </Route>
               <Route path="/destinations">

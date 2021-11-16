@@ -1,10 +1,12 @@
+
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import {  Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     return (
         <div className=" container">
-            <h2 className="text-center fw-bolder py-5">Our Tour Offers</h2>
+            <h2 className="text-center fw-bolder py-5">Travel Places</h2>
             
 
 
@@ -14,8 +16,12 @@ const Blog = () => {
     <Card.Body>
       <Card.Title>Travel In Bangladesh</Card.Title>
       <Card.Text>
-      Bangladesh is the gift of nature
+      Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast
       </Card.Text>
+      
+       <button className="btn btn-success"> <a href="https://www.google.com/search?q=travel+to+bangladesh&oq=travel+to+bangladesh&aqs=chrome..69i57j0i512l7.4786j0j4&client=ms-android-xiaomi-rev1&sourceid=chrome-mobile&ie=UTF-8">See More</a> </button>
+    
+                        
     </Card.Body>
 
   </Card>
@@ -26,6 +32,7 @@ const Blog = () => {
       <Card.Text>
       Kathryn was born and raised in Indonesia, North Way Indonesia He graduated from the University...
       </Card.Text>
+      <button className="btn btn-success"> <a href="https://www.google.com/search?q=travel+to+india&oq=travel+to+bangladesh&aqs=chrome..69i57j0i512l7.4786j0j4&client=ms-android-xiaomi-rev1&sourceid=chrome-mobile&ie=UTF-8">See More</a> </button>
     </Card.Body>
 
   </Card>
@@ -36,6 +43,7 @@ const Blog = () => {
       <Card.Text>
       Switzerland is the Haven on Earth and, is also known for its ski resorts and hiking trails
       </Card.Text>
+      <button className="btn btn-success"> <a href="https://www.google.com/search?q=travel+to+ Switzerland&oq=travel+to+bangladesh&aqs=chrome..69i57j0i512l7.4786j0j4&client=ms-android-xiaomi-rev1&sourceid=chrome-mobile&ie=UTF-8">See More</a> </button>
     </Card.Body>
 
   </Card>
